@@ -19,4 +19,8 @@ class Users extends BaseController
     {
         return view('users/RoadMap');
     }
+    public function SignUp()
+    {
+        return view('users/SignUp');
+    }
 }
