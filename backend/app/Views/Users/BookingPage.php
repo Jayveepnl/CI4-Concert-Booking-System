@@ -4,12 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book Tickets | ConcertEase</title>
+  <link rel="shortcut icon" type="image/png" href="/assets/Gemini_Generated_Image_5nnm915nnm915nnm.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-[#0a192f] to-[#112240] text-white min-h-screen">
   <!-- Header -->
   <header class="p-6 flex justify-between items-center bg-[#0b1b33] shadow-lg">
-    <h1 class="text-2xl font-extrabold text-yellow-400">🎟 ConcertEase</h1>
+    <div class="flex items-center space-x-3">
+    <img src="assets/Gemini_Generated_Image_5nnm915nnm915nnm.ico" alt="ConcertEase Logo" class="w-10 h-10 rounded-full border-2 border-yellow-400">
+    <h1 class="text-2xl font-bold tracking-wide text-white">ConcertEase</h1>
+  </div>
     <nav>
       <a href="index.html" class="mx-4 text-gray-300 hover:text-yellow-400 transition">Home</a>
       <a href="login.html" class="mx-4 text-gray-300 hover:text-yellow-400 transition">Login</a>

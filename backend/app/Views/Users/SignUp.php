@@ -10,7 +10,7 @@
 
   <!-- Sign Up Card -->
   <div class="bg-black bg-opacity-40 p-10 rounded-2xl shadow-2xl w-full max-w-md text-center">
-    <h1 class="text-3xl font-extrabold mb-6">🎶 Join ConcertEase</h1>
+    <h1 class="text-3xl font-extrabold mb-6">Join ConcertEase</h1>
     <p class="text-gray-300 mb-8 text-sm">Create an account to start booking your favorite concerts today!</p>
 
     <!-- Sign Up Form -->
