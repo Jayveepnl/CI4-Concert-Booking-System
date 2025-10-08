@@ -22,7 +22,6 @@
   <!-- Header -->
   <header class="text-center py-10 fade-in-up">
     <h1 class="text-4xl font-extrabold text-yellow-500">ConcertEase Mood Board</h1>
-    <p class="text-gray-600 mt-2">Dark-to-light color system inspired by ConcertEase’s branding</p>
       <div class="absolute top-6 left-6">
       <a href="index.html" class="block mt-6 text-sm text-black-400 hover:underline">← Back to Home</a>
       </div>
@@ -31,83 +30,83 @@
   <main class="max-w-6xl mx-auto px-6 space-y-16">
 
     <!-- Color System -->
-    <section class="fade-in-up delay-1">
-      <h2 class="text-2xl font-bold mb-6 text-[#112240]">🎨 Color System — Dark to Light</h2>
+<section class="fade-in-up delay-1">
+  <h2 class="text-2xl font-bold mb-6 text-[#112240]">🎨 Color System — Dark to Light</h2>
 
-      <!-- Midnight Blue -->
-      <div class="mb-8">
-        <h3 class="text-xl font-semibold text-yellow-500 mb-3">Midnight Blue</h3>
-        <div class="grid grid-cols-3 gap-4">
-          <div class="rounded-xl p-6 text-center bg-[#0a192f] text-white hover:scale-105 transition">
-            <p class="font-semibold">Dark</p>
-            <p class="text-sm text-gray-300">#0a192f</p>
-          </div>
-          <div class="rounded-xl p-6 text-center bg-[#112240] text-white hover:scale-105 transition">
-            <p class="font-semibold">Base</p>
-            <p class="text-sm text-gray-300">#112240</p>
-          </div>
-          <div class="rounded-xl p-6 text-center bg-[#233554] text-white hover:scale-105 transition">
-            <p class="font-semibold">Light</p>
-            <p class="text-sm text-gray-300">#233554</p>
-          </div>
-        </div>
+  <!-- Midnight Blue -->
+  <div class="mb-12">
+    <h3 class="text-xl font-semibold text-yellow-500 mb-4">Midnight Blue</h3>
+    <div class="flex flex-col items-center gap-4">
+      <div class="rounded-xl p-6 text-center bg-[#0a192f] text-white w-72 hover:scale-105 transition">
+        <p class="font-semibold">Dark</p>
+        <p class="text-sm text-gray-300">#0a192f</p>
       </div>
+      <div class="rounded-xl p-6 text-center bg-[#112240] text-white w-72 hover:scale-105 transition">
+        <p class="font-semibold">Base</p>
+        <p class="text-sm text-gray-300">#112240</p>
+      </div>
+      <div class="rounded-xl p-6 text-center bg-[#233554] text-white w-72 hover:scale-105 transition">
+        <p class="font-semibold">Light</p>
+        <p class="text-sm text-gray-300">#233554</p>
+      </div>
+    </div>
+  </div>
 
-      <!-- Gold -->
-      <div class="mb-8">
-        <h3 class="text-xl font-semibold text-yellow-500 mb-3">Gold</h3>
-        <div class="grid grid-cols-3 gap-4">
-          <div class="rounded-xl p-6 text-center bg-[#ffd700] text-white hover:scale-105 transition">
-            <p class="font-semibold">Dark</p>
-            <p class="text-sm text-gray-200">#ffd700</p>
-          </div>
-          <div class="rounded-xl p-6 text-center bg-[#ffdb19] text-black hover:scale-105 transition">
-            <p class="font-semibold">Base</p>
-            <p class="text-sm">#ffdb19</p>
-          </div>
-          <div class="rounded-xl p-6 text-center bg-[#ffe766] text-black hover:scale-105 transition">
-            <p class="font-semibold">Light</p>
-            <p class="text-sm">#ffe766</p>
-          </div>
-        </div>
+  <!-- Gold -->
+  <div class="mb-12">
+    <h3 class="text-xl font-semibold text-yellow-500 mb-4">Gold</h3>
+    <div class="flex flex-col items-center gap-4">
+      <div class="rounded-xl p-6 text-center bg-[#ffd700] text-white w-72 hover:scale-105 transition">
+        <p class="font-semibold">Dark</p>
+        <p class="text-sm text-gray-200">#ffd700</p>
       </div>
+      <div class="rounded-xl p-6 text-center bg-[#ffdb19] text-black w-72 hover:scale-105 transition">
+        <p class="font-semibold">Base</p>
+        <p class="text-sm">#ffdb19</p>
+      </div>
+      <div class="rounded-xl p-6 text-center bg-[#ffe766] text-black w-72 hover:scale-105 transition">
+        <p class="font-semibold">Light</p>
+        <p class="text-sm">#ffe766</p>
+      </div>
+    </div>
+  </div>
 
-      <!-- Fanciful Flowers -->
-      <div>
-        <h3 class="text-xl font-semibold text-yellow-500 mb-3">Fanciful Flowers</h3>
-        <div class="grid grid-cols-3 gap-4">
-          <div class="rounded-xl p-6 text-center bg-[#660066] text-white hover:scale-105 transition">
-            <p class="font-semibold">Dark</p>
-            <p class="text-sm text-gray-300">#660066</p>
-          </div>
-          <div class="rounded-xl p-6 text-center bg-[#b00088] text-white hover:scale-105 transition">
-            <p class="font-semibold">Base</p>
-            <p class="text-sm text-gray-300">#b00088</p>
-          </div>
-          <div class="rounded-xl p-6 text-center bg-[#f24b91] text-black hover:scale-105 transition">
-            <p class="font-semibold">Light</p>
-            <p class="text-sm">#f24b91</p>
-          </div>
-        </div>
+  <!-- Fanciful Flowers -->
+  <div>
+    <h3 class="text-xl font-semibold text-yellow-500 mb-4">Fanciful Flowers</h3>
+    <div class="flex flex-col items-center gap-4">
+      <div class="rounded-xl p-6 text-center bg-[#660066] text-white w-72 hover:scale-105 transition">
+        <p class="font-semibold">Dark</p>
+        <p class="text-sm text-gray-300">#660066</p>
       </div>
-    </section>
+      <div class="rounded-xl p-6 text-center bg-[#b00088] text-white w-72 hover:scale-105 transition">
+        <p class="font-semibold">Base</p>
+        <p class="text-sm text-gray-300">#b00088</p>
+      </div>
+      <div class="rounded-xl p-6 text-center bg-[#f24b91] text-black w-72 hover:scale-105 transition">
+        <p class="font-semibold">Light</p>
+        <p class="text-sm">#f24b91</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Typography -->
-    <section class="fade-in-up delay-2">
-      <h2 class="text-2xl font-bold mb-6 text-[#112240]">✍️ Typography</h2>
-      <div class="space-y-4">
-        <div class="bg-gray-100 p-6 rounded-xl hover:scale-105 transition border border-gray-200">
-          <p class="text-yellow-600 font-bold text-lg">Heading Font</p>
-          <h1 class="text-4xl font-extrabold tracking-wide text-[#112240]">Poppins — Bold & Modern</h1>
-        </div>
-        <div class="bg-gray-100 p-6 rounded-xl hover:scale-105 transition border border-gray-200">
-          <p class="text-yellow-600 font-bold text-lg">Body Font</p>
-          <p class="text-gray-700 text-lg leading-relaxed">
-            Inter — Clean and readable for paragraphs, ensuring comfort during long reads.
-          </p>
-        </div>
-      </div>
-    </section>
+<!-- Typography -->
+<section class="fade-in-up delay-2 mt-16">
+  <h2 class="text-2xl font-bold mb-6 text-[#112240]">✍️ Typography</h2>
+  <div class="space-y-4">
+    <div class="bg-gray-100 p-6 rounded-xl hover:scale-105 transition border border-gray-200">
+      <p class="text-yellow-600 font-bold text-lg">Heading Font</p>
+      <h1 class="text-4xl font-extrabold tracking-wide text-[#112240]">Poppins — Bold & Modern</h1>
+    </div>
+    <div class="bg-gray-100 p-6 rounded-xl hover:scale-105 transition border border-gray-200">
+      <p class="text-yellow-600 font-bold text-lg">Body Font</p>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Inter — Clean and readable for paragraphs, ensuring comfort during long reads.
+      </p>
+    </div>
+  </div>
+</section>
 
     <!-- Buttons -->
     <section class="fade-in-up delay-3">
