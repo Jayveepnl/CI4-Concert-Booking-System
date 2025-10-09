@@ -4,17 +4,16 @@
 <br/>
 
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+  <a href="https://github.com/Jayveepnl">
+    <img src="backend/public/assets/JayveePanol.jpg" alt="Nyebe" width="130" height="100">
   </a>
 <!-- * Title Section -->
-  <h3 align="center">AD - CI4 Template</h3>
+  <h3 align="center">Concertease</h3>
 </div>
 
 <!-- * Description Section -->
 <div align="center">
-This repository is a beginner-friendly CodeIgniter 4 template.  
-It helps teams quickly bootstrap backend + frontend projects, with simple sample modules that show how to extend the system.
+welcome to ConcertEase, the ultimate platform for booking concerts and live events with ease. Whether you're a fan looking to catch your favorite artist on stage or an organizer planning a show, ConcertEase brings everything together in one seamless experience.
 </div>
 
 <br/>
@@ -64,6 +63,8 @@ It is designed to be **easy to start with** and a **reference for adding new fea
 
 ### Key Components
 
+### Key Components
+
 These are **sample modules** included (or suggested) for learning how to add features:
 
 | Component                 | Purpose                                                             | Notes                                                   |
@@ -71,6 +72,7 @@ These are **sample modules** included (or suggested) for learning how to add fea
 | **Auth (Sample)**         | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
 | **CRUD Module**           | Example entity (`Posts` or `Tasks`) with create/read/update/delete. | Demonstrates Controller → Service → Repository pattern. |
 | **Scheduler (Sample)**    | Simple to-do list with due dates.                                   | Shows how to extend with new tables and services.       |
+| **Button Component**      | Reusable UI button for navigation and actions.                      | Located at `app/Views/components/button/landingpage-button.php`. Use via `<?= view('components/button/landingpage-button', [...]) ?>`. |
 
  <!-- ! Start simple. Use these modules as **learning samples**; extend or replace them based on your project’s needs. -->
 
