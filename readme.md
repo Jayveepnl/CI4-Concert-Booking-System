@@ -5,16 +5,15 @@
 
 <div align="center">
   <a href="https://github.com/Jayveepnl">
-    <img src="./assets/img/JayveePanol.jpg" alt="Nyebe" width="130" height="100">
+    <img src="backend/public/assets/JayveePanol.jpg" alt="Nyebe" width="130" height="100">
   </a>
 <!-- * Title Section -->
-  <h3 align="center">AD - CI4 Template</h3>
+  <h3 align="center">Concertease</h3>
 </div>
 
 <!-- * Description Section -->
 <div align="center">
-This repository is a beginner-friendly CodeIgniter 4 template.  
-It helps teams quickly bootstrap backend + frontend projects, with simple sample modules that show how to extend the system.
+welcome to ConcertEase, the ultimate platform for booking concerts and live events with ease. Whether you're a fan looking to catch your favorite artist on stage or an organizer planning a show, ConcertEase brings everything together in one seamless experience.
 </div>
 
 <br/>
