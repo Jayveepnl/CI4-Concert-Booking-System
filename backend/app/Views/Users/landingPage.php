@@ -58,21 +58,21 @@
     <h3 class="text-4xl font-extrabold mb-8 text-white">Upcoming Concerts</h3>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
 
-        <?= view('components/cards/concert-card', [
+        <?= view('components/cards/landingpage-card', [
             'title' => 'Jason Derulo',
             'excerpt' => 'November 22, 2025 — SM Mall of Asia',
             'image' => 'https://images1.smtickets.com/images/portrait_27052025194947.jpg',
             'href' => 'booking.html'
         ]) ?>
 
-        <?= view('components/cards/concert-card', [
+        <?= view('components/cards/landingpage-card', [
             'title' => 'BlackPink World Tour',
             'excerpt' => 'November 22, 2025 — SM Mall of Asia',
             'image' => 'https://images1.smtickets.com/images/portrait_23072025231047.jpg',
             'href' => 'booking.html'
         ]) ?>
 
-        <?= view('components/cards/concert-card', [
+        <?= view('components/cards/landingpage-card', [
             'title' => 'Doja Cat',
             'excerpt' => 'December 7, 2025 — SM Mall of Asia',
             'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc6jcTKGJKRKcXmB2NZZY9Eju0l0LdptdCpw&s',
