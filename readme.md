@@ -63,6 +63,8 @@ It is designed to be **easy to start with** and a **reference for adding new fea
 
 ### Key Components
 
+### Key Components
+
 These are **sample modules** included (or suggested) for learning how to add features:
 
 | Component                 | Purpose                                                             | Notes                                                   |
@@ -70,6 +72,7 @@ These are **sample modules** included (or suggested) for learning how to add fea
 | **Auth (Sample)**         | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
 | **CRUD Module**           | Example entity (`Posts` or `Tasks`) with create/read/update/delete. | Demonstrates Controller → Service → Repository pattern. |
 | **Scheduler (Sample)**    | Simple to-do list with due dates.                                   | Shows how to extend with new tables and services.       |
+| **Button Component**      | Reusable UI button for navigation and actions.                      | Located at `app/Views/components/button/landingpage-button.php`. Use via `<?= view('components/button/landingpage-button', [...]) ?>`. |
 
  <!-- ! Start simple. Use these modules as **learning samples**; extend or replace them based on your project’s needs. -->
 
