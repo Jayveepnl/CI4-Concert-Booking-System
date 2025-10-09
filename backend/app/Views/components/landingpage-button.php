@@ -15,7 +15,7 @@ $size = $size ?? 'px-4 py-2 text-sm';
 
 $bg = "bg-$color-400";
 $hover = "hover:bg-$color-300";
-$text = "text-black";
+$text = "Book Now";
 $border = "border border-$color-400";
 
 ?>

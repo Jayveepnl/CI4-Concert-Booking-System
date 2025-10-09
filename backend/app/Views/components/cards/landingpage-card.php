@@ -6,7 +6,7 @@
 // $href: string|null
 ?>
 
-<article class="bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+<article class="bg-black bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
   <?php if (!empty($image)): ?>
     <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
       <img src="<?= esc($image) ?>" alt="<?= esc($title ?? '') ?>" class="h-full object-cover rounded-lg">
@@ -22,7 +22,7 @@
   <?php endif; ?>
 
   <?php if (!empty($href)): ?>
-    <?= view('components/button', [
+    <?= view('components/landingpage-button', [
         'text' => 'Book Now',
         'href' => $href,
         'color' => 'yellow',

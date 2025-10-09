@@ -11,17 +11,21 @@
 
   <!-- Header -->
   <header class="p-6 flex justify-between items-center bg-[#0b1b33] shadow-lg">
-    <div class="flex items-center space-x-3">
-      <img src="assets/Gemini_Generated_Image_5nnm915nnm915nnm.ico" alt="ConcertEase Logo" class="w-10 h-10 rounded-full border-2 border-yellow-400">
-      <h1 class="text-2xl font-bold tracking-wide text-white">ConcertEase</h1>
-    </div>
-    <nav>
-    <?= view('components/button', ['text' => 'Moodboard', 'href' => 'moodboard.html', 'color' => 'yellow', 'size' => 'px-4 py-2 text-sm']) ?>
-    <?= view('components/button', ['text' => 'Roadmap', 'href' => 'roadmap.html', 'color' => 'yellow', 'size' => 'px-4 py-2 text-sm']) ?>
-    <?= view('components/button', ['text' => 'Login', 'href' => 'login.html', 'color' => 'yellow', 'size' => 'px-4 py-2 text-sm']) ?>
-    <?= view('components/button', ['text' => 'Sign Up', 'href' => 'signup.html', 'color' => 'yellow', 'size' => 'px-4 py-2 text-sm']) ?>
-    </nav>
-  </header>
+  <!-- Logo + Title -->
+  <div class="flex items-center space-x-3">
+    <img src="assets/Gemini_Generated_Image_5nnm915nnm915nnm.ico" alt="ConcertEase Logo" class="w-10 h-10 rounded-full border-2 border-yellow-400">
+    <h1 class="text-2xl font-bold tracking-wide text-white">ConcertEase</h1>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <nav class="flex items-center space-x-4 text-sm text-white">
+    <?= view('components/Booking-button', ['text' => 'Moodboard', 'href' => 'moodboard.html', 'color' => 'yellow', 'size' => 'px-4 py-2 text-sm']) ?>
+    <?= view('components/Booking-button', ['text' => 'Roadmap', 'href' => 'roadmap.html', 'color' => 'yellow', 'size' => 'px-4 py-2 text-sm']) ?>
+    <?= view('components/Booking-button', ['text' => 'Login', 'href' => 'login.html', 'color' => 'yellow', 'size' => 'px-4 py-2 text-sm']) ?>
+    <?= view('components/Booking-button', ['text' => 'Sign Up', 'href' => 'signup.html', 'color' => 'yellow', 'size' => 'px-4 py-2 text-sm']) ?>
+  </nav>
+</header>
+
 
   <!-- Main Section -->
   <section class="py-16 px-6 max-w-7xl mx-auto">
