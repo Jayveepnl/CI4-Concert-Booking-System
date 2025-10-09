@@ -25,8 +25,6 @@
     <!-- Added Buttons -->
     <a href="moodboard.html" class="px-4 py-2 border border-yellow-400 text-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Moodboard</a>
     <a href="roadmap.html" class="px-4 py-2 border border-yellow-400 text-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Roadmap</a>
-
-    <!-- Existing Buttons -->
     <a href="login.html" class="px-4 py-2 border border-yellow-400 text-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Login</a>
     <a href="signup.html" class="px-4 py-2 border border-yellow-400 text-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Sign Up</a>
   </nav>
