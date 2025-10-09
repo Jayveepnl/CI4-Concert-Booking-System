@@ -28,7 +28,7 @@
 
     <!-- Existing Buttons -->
     <a href="login.html" class="px-4 py-2 border border-yellow-400 text-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Login</a>
-    <a href="signup.html" class="px-4 py-2 bg-yellow-400 text-black rounded-full font-semibold hover:bg-yellow-300 transition">Sign Up</a>
+    <a href="signup.html" class="px-4 py-2 border border-yellow-400 text-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Sign Up</a>
   </nav>
 </header>
 
@@ -54,41 +54,33 @@
       </a>
     </div>
   </section>
-
-
-  <!-- Upcoming Events Section -->
   <section id="events" class="py-20 text-center">
-    <h3 class="text-4xl font-extrabold mb-8">Upcoming Concerts</h3>
+    <h3 class="text-4xl font-extrabold mb-8 text-white">Upcoming Concerts</h3>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
-      <div class="bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-        <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
-          <img src="https://images1.smtickets.com/images/portrait_27052025194947.jpg" alt="Jason Derulo" class="h-full object-cover rounded-lg">
-        </div>
-        <h4 class="text-2xl font-semibold">Jason Derulo</h4>
-        <p class="text-gray-300 text-sm mb-4">November 22, 2025 — SM Mall of Asia</p>
-        <a href="booking.html" class="px-4 py-2 bg-yellow-400 text-black rounded-full text-sm font-semibold hover:bg-yellow-300">Book Now</a>
-      </div>
 
-      <div class="bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-        <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
-          <img src="https://images1.smtickets.com/images/portrait_23072025231047.jpg" alt="BlackPink" class="h-full object-cover rounded-lg">
-        </div>
-        <h4 class="text-2xl font-semibold">BlackPink World Tour</h4>
-        <p class="text-gray-300 text-sm mb-4">November 22, 2025 — SM Mall of Asia</p>
-        <a href="booking.html" class="px-4 py-2 bg-yellow-400 text-black rounded-full text-sm font-semibold hover:bg-yellow-300">Book Now</a>
-      </div>
+        <?= view('components/cards/concert-card', [
+            'title' => 'Jason Derulo',
+            'excerpt' => 'November 22, 2025 — SM Mall of Asia',
+            'image' => 'https://images1.smtickets.com/images/portrait_27052025194947.jpg',
+            'href' => 'booking.html'
+        ]) ?>
 
-      <div class="bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-        <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc6jcTKGJKRKcXmB2NZZY9Eju0l0LdptdCpw&s" alt="Doja Cat" class="h-full object-cover rounded-lg">
-        </div>
-        <h4 class="text-2xl font-semibold">Doja Cat</h4>
-        <p class="text-gray-300 text-sm mb-4">December 7, 2025 — SM Mall of Asia</p>
-        <a href="booking.html" class="px-4 py-2 bg-yellow-400 text-black rounded-full text-sm font-semibold hover:bg-yellow-300">Book Now</a>
-      </div>
+        <?= view('components/cards/concert-card', [
+            'title' => 'BlackPink World Tour',
+            'excerpt' => 'November 22, 2025 — SM Mall of Asia',
+            'image' => 'https://images1.smtickets.com/images/portrait_23072025231047.jpg',
+            'href' => 'booking.html'
+        ]) ?>
+
+        <?= view('components/cards/concert-card', [
+            'title' => 'Doja Cat',
+            'excerpt' => 'December 7, 2025 — SM Mall of Asia',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc6jcTKGJKRKcXmB2NZZY9Eju0l0LdptdCpw&s',
+            'href' => 'booking.html'
+        ]) ?>
+
     </div>
-  </section>
-
+</section>
   <!-- Contact Section -->
   <section id="contact" class="py-20 bg-black bg-opacity-30 text-center">
     <h3 class="text-3xl font-bold mb-8">Contact Us</h3>

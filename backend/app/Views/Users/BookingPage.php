@@ -25,71 +25,46 @@
   <section class="py-16 px-6 max-w-7xl mx-auto">
     <h2 class="text-4xl font-bold text-center mb-10">Available Concerts</h2>
 
-    <!-- Concert Cards -->
-    <div id="concert-list" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
-      <!-- Existing Cards -->
-      <div class="concert-card bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-           data-event="Taylor Swift | The Eras Tour">
-        <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
-          <img src="https://images.bauerhosting.com/empire/2023/10/taylor-swift-eras-tour-concert-film.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80" alt="Taylor Swift" class="h-full object-cover rounded-lg">
-        </div>
-        <h4 class="text-2xl font-semibold text-yellow-400">Taylor Swift | The Eras Tour</h4>
-        <p class="text-gray-300 text-sm mb-4">December 13, 2025 — Mall of Asia Arena</p>
-        <button class="book-btn px-4 py-2 bg-yellow-400 text-black rounded-full text-sm font-semibold hover:bg-yellow-300 w-full transition">Book Now</button>
-      </div>
+<!-- Concerts Section -->
+<section class="mt-12 max-w-7xl mx-auto px-6">
+    <div class="gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <?= view('components/cards/concert-card', [
+            'title' => 'Taylor Swift | The Eras Tour',
+            'excerpt' => 'December 13, 2025 — Mall of Asia Arena',
+            'image' => 'https://images.bauerhosting.com/empire/2023/10/taylor-swift-eras-tour-concert-film.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80'
+        ]) ?>
 
-      <div class="concert-card bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-           data-event="Imagine Dragons | Live in Manila">
-        <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Imagine_Dragons%2C_Roundhouse%2C_London_%2835390234536%29.jpg" alt="Imagine Dragons" class="h-full object-cover rounded-lg">
-        </div>
-        <h4 class="text-2xl font-semibold text-yellow-400">Imagine Dragons | Live in Manila</h4>
-        <p class="text-gray-300 text-sm mb-4">November 20, 2025 — Araneta Coliseum</p>
-        <button class="book-btn px-4 py-2 bg-yellow-400 text-black rounded-full text-sm font-semibold hover:bg-yellow-300 w-full transition">Book Now</button>
-      </div>
+        <?= view('components/cards/concert-card', [
+            'title' => 'Imagine Dragons | Live in Manila',
+            'excerpt' => 'November 20, 2025 — Araneta Coliseum',
+            'image' => 'https://upload.wikimedia.org/wikipedia/commons/0/04/Imagine_Dragons%2C_Roundhouse%2C_London_%2835390234536%29.jpg'
+        ]) ?>
 
-      <div class="concert-card bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-           data-event="Michael Bublé | Jazz Nights">
-        <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
-          <img src="https://i8.amplience.net/i/naras/Michael_Buble_Press_Photo_Credit_Sarah_Krick" alt="Michael Bublé" class="h-full object-cover rounded-lg">
-        </div>
-        <h4 class="text-2xl font-semibold text-yellow-400">Michael Bublé | Jazz Nights</h4>
-        <p class="text-gray-300 text-sm mb-4">October 28, 2025 — New Frontier Theater</p>
-        <button class="book-btn px-4 py-2 bg-yellow-400 text-black rounded-full text-sm font-semibold hover:bg-yellow-300 w-full transition">Book Now</button>
-      </div>
+        <?= view('components/cards/concert-card', [
+            'title' => 'Michael Bublé | Jazz Nights',
+            'excerpt' => 'October 28, 2025 — New Frontier Theater',
+            'image' => 'https://i8.amplience.net/i/naras/Michael_Buble_Press_Photo_Credit_Sarah_Krick'
+        ]) ?>
 
-      <!-- New Cards -->
-      <div class="concert-card bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-           data-event="Jason Derulo | World Tour">
-        <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
-          <img src="https://images1.smtickets.com/images/portrait_27052025194947.jpg" alt="Jason Derulo" class="h-full object-cover rounded-lg">
-        </div>
-        <h4 class="text-2xl font-semibold text-yellow-400">Jason Derulo | World Tour</h4>
-        <p class="text-gray-300 text-sm mb-4">November 22, 2025 — SM Mall of Asia Arena</p>
-        <button class="book-btn px-4 py-2 bg-yellow-400 text-black rounded-full text-sm font-semibold hover:bg-yellow-300 w-full transition">Book Now</button>
-      </div>
+        <?= view('components/cards/concert-card', [
+            'title' => 'Jason Derulo | World Tour',
+            'excerpt' => 'November 22, 2025 — SM Mall of Asia Arena',
+            'image' => 'https://images1.smtickets.com/images/portrait_27052025194947.jpg'
+        ]) ?>
 
-      <div class="concert-card bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-           data-event="BlackPink | Born Pink World Tour">
-        <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
-          <img src="https://images1.smtickets.com/images/portrait_23072025231047.jpg" alt="BlackPink" class="h-full object-cover rounded-lg">
-        </div>
-        <h4 class="text-2xl font-semibold text-yellow-400">BlackPink | Born Pink World Tour</h4>
-        <p class="text-gray-300 text-sm mb-4">November 22, 2025 — SM Mall of Asia Arena</p>
-        <button class="book-btn px-4 py-2 bg-yellow-400 text-black rounded-full text-sm font-semibold hover:bg-yellow-300 w-full transition">Book Now</button>
-      </div>
+        <?= view('components/cards/concert-card', [
+            'title' => 'BlackPink | Born Pink World Tour',
+            'excerpt' => 'November 22, 2025 — SM Mall of Asia Arena',
+            'image' => 'https://images1.smtickets.com/images/portrait_23072025231047.jpg'
+        ]) ?>
 
-      <div class="concert-card bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-           data-event="Doja Cat | Planet Her Live">
-        <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc6jcTKGJKRKcXmB2NZZY9Eju0l0LdptdCpw&s" alt="Doja Cat" class="h-full object-cover rounded-lg">
-        </div>
-        <h4 class="text-2xl font-semibold text-yellow-400">Doja Cat | Planet Her Live</h4>
-        <p class="text-gray-300 text-sm mb-4">December 7, 2025 — SM Mall of Asia Arena</p>
-        <button class="book-btn px-4 py-2 bg-yellow-400 text-black rounded-full text-sm font-semibold hover:bg-yellow-300 w-full transition">Book Now</button>
-      </div>
+        <?= view('components/cards/concert-card', [
+            'title' => 'Doja Cat | Planet Her Live',
+            'excerpt' => 'December 7, 2025 — SM Mall of Asia Arena',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc6jcTKGJKRKcXmB2NZZY9Eju0l0LdptdCpw&s'
+        ]) ?>
     </div>
-  </section>
+</section>
 
  <!-- Seat Selection Modal -->
 <div id="seatModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
@@ -137,9 +112,6 @@
     </div>
   </div>
 </div>
-
-
-
   <script>
     const seatModal = document.getElementById('seatModal');
     const modalTitle = document.getElementById('modalTitle');

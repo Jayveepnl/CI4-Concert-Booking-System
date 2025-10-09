@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ConcertEase — Roadmap</title>
+   <link rel="shortcut icon" type="image/png" href="/assets/Gemini_Generated_Image_5nnm915nnm915nnm.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .card-shadow { box-shadow: 0 6px 18px rgba(15,23,42,0.06); }
@@ -20,14 +21,30 @@
 </head>
 <body class="bg-white text-[#0f172a] font-sans">
 
-  <!-- Header -->
-  <header class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
-    <div>
-      <h1 class="text-2xl font-extrabold text-[#112240]">ConcertEase Roadmap</h1>
-      <p class="text-sm text-gray-600">High-level plan and status for upcoming features.</p>
-    </div>
-    <a href="index.html" class="block mt-6 text-sm text-black-400 hover:underline">← Back to Home</a>
-  </header>
+ <!-- Header -->
+<header class="flex flex-col md:flex-row items-center justify-between p-6 bg-gradient-to-r from-purple-700 via-blue-700 to-pink-600 text-white sticky top-0 z-10 shadow-lg rounded-b-xl">
+  
+  <!-- Logo + Title -->
+  <div class="flex items-center space-x-3 mb-4 md:mb-0">
+    <img src="assets/Gemini_Generated_Image_5nnm915nnm915nnm.ico" alt="ConcertEase Logo" class="w-12 h-12 rounded-full shadow-md">
+    <h1 class="text-2xl md:text-3xl font-bold tracking-wide text-yellow-400">ConcertEase</h1>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="flex flex-wrap items-center gap-3 md:gap-4 text-sm md:text-base">
+    <a href="index.html" class="px-4 py-2 border border-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Home</a>
+    <a href="moodboard.html" class="px-4 py-2 border border-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">MoodBoard</a>
+    <a href="login.html" class="px-4 py-2 border border-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Login</a>
+    <a href="signup.html" class="px-4 py-2 border border-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">SignUp</a>
+  </nav>
+
+  <!-- Subtitle / Description -->
+  <div class="mt-4 md:mt-0 text-center md:text-left">
+    <h2 class="text-lg md:text-xl font-medium text-white/90">High-level plan & status of upcoming features</h2>
+  </div>
+
+</header>
+
 
   <!-- Filter Chips -->
   <div class="max-w-6xl mx-auto px-6 mb-6">
