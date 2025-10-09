@@ -90,10 +90,8 @@
     </p>
     <a href="mailto:support@concertease.com" class="px-6 py-2 bg-yellow-400 text-black rounded-full font-semibold hover:bg-yellow-300">Email Us</a>
   </section>
-
-  <!-- Footer -->
-  <footer class="text-center py-6 text-sm bg-black bg-opacity-40">
-    © 2025 ConcertEase — All Rights Reserved.
-  </footer>
+  <?= view('components/footer', [
+    
+        ]) ?>
 </body>
 </html>
