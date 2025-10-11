@@ -4,13 +4,34 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ConcertEase | Sign Up</title>
-    <link rel="shortcut icon" type="image/png" href="/assets/Gemini_Generated_Image_5nnm915nnm915nnm.ico" />
+  <link rel="shortcut icon" type="image/png" href="/assets/Gemini_Generated_Image_5nnm915nnm915nnm.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background: linear-gradient(to bottom, #312e81, #6b21a8, #db2777);
+      font-family: 'Poppins', sans-serif;
+    }
+    .card {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+    input {
+      transition: all 0.3s ease;
+    }
+    input:focus {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+    button:hover {
+      transform: scale(1.03);
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-b from-indigo-900 via-purple-800 to-pink-600 text-white font-sans min-h-screen flex items-center justify-center">
+<body class="text-white min-h-screen flex items-center justify-center">
 
   <!-- Sign Up Card -->
-  <div class="bg-black bg-opacity-40 p-10 rounded-2xl shadow-2xl w-full max-w-md text-center">
+  <div class="card p-10 rounded-2xl w-full max-w-md text-center">
     <h1 class="text-3xl font-extrabold mb-6">Join ConcertEase</h1>
     <p class="text-gray-300 mb-8 text-sm">Create an account to start booking your favorite concerts today!</p>
 
@@ -47,7 +68,7 @@
       </div>
 
       <button type="submit"
-              class="w-full mt-6 bg-yellow-400 text-black font-semibold py-3 rounded-full hover:bg-yellow-300 transition">
+              class="w-full mt-6 bg-yellow-400 text-black font-semibold py-3 rounded-full transition">
         Create Account
       </button>
     </form>
@@ -62,11 +83,14 @@
     <!-- Already have an account -->
     <p class="mt-6 text-gray-300 text-sm">
       Already have an account?
-      <a href="login.html" class="text-yellow-300 font-semibold hover:underline">Sign In</a>
+      <a href="/login" class="text-yellow-300 font-semibold hover:underline">login</a>
     </p>
 
-    <!-- Back to home -->
-    <a href="index.html" class="block mt-6 text-sm text-yellow-400 hover:underline">← Back to Home</a>
+    <!-- Back to home button (component-ready) -->
+    <?= view('components/buttons/back_button', [
+      'href' => '/',
+      'label' => 'Back to Home'
+    ]) ?>
   </div>
 
 </body>
