@@ -1,32 +1,18 @@
-<?php
-// Data contract:
-// $title: string
-// $excerpt: string
-// $image: string|null
-// $href: string|null
-?>
+<div class="bg-black/40 rounded-2xl overflow-hidden shadow-lg card-hover flex flex-col items-center text-center">
+  <div class="w-full flex justify-center bg-black/30">
+    <img 
+      src="<?= $image ?>" 
+      alt="<?= $title ?>" 
+      class="object-contain w-full max-h-[450px] transition-transform duration-300 hover:scale-105"
+    >
+  </div>
 
-<article class="bg-black bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-  <?php if (!empty($image)): ?>
-    <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
-      <img src="<?= esc($image) ?>" alt="<?= esc($title ?? '') ?>" class="h-full object-cover rounded-lg">
-    </div>
-  <?php endif; ?>
-
-  <?php if (!empty($title)): ?>
-    <h4 class="text-2xl font-semibold mb-2"><?= esc($title) ?></h4>
-  <?php endif; ?>
-
-  <?php if (!empty($excerpt)): ?>
-    <p class="text-gray-300 text-sm mb-4"><?= esc($excerpt) ?></p>
-  <?php endif; ?>
-
-  <?php if (!empty($href)): ?>
-    <?= view('components/landingpage-button', [
-        'text' => 'Book Now',
-        'href' => $href,
-        'color' => 'yellow',
-        'size' => 'px-4 py-2 text-sm'
-    ]) ?>
-  <?php endif; ?>
-</article>
+  <div class="p-6 w-full">
+    <h4 class="text-2xl font-semibold mb-2 text-yellow-300"><?= $title ?></h4>
+    <p class="text-gray-300 mb-4 text-sm md:text-base"><?= $excerpt ?></p>
+    <a href="<?= $href ?>" 
+       class="inline-block bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-300 btn-main">
+       Book Now
+    </a>
+  </div>
+</div>

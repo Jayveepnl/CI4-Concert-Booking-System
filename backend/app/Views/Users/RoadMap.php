@@ -1,165 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ConcertEase — Roadmap</title>
-   <link rel="shortcut icon" type="image/png" href="/assets/Gemini_Generated_Image_5nnm915nnm915nnm.ico" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .card-shadow { box-shadow: 0 6px 18px rgba(15,23,42,0.06); }
-    .timeline-line { width: 3px; background: linear-gradient(#facc15, #112240); border-radius: 999px; }
-    .badge { cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .badge:hover { transform: scale(1.05); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
 
-    .badge-planned { background:#ebf5ff; color:#1e40af; }
-    .badge-inprogress { background:#ecfdf5; color:#065f46; }
-    .badge-backlog { background:#fff7ed; color:#92400e; }
-    .badge-done { background:#ecfdf0; color:#065f46; }
-    .badge-active { border: 2px solid #facc15; }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConcertEase – Roadmap</title>
+  <link rel="shortcut icon" type="image/png" href="/assets/music_icon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Roboto Slab', serif;
+    }
+
+    .heading {
+      font-family: 'Righteous', sans-serif;
+    }
   </style>
 </head>
-<body class="bg-white text-[#0f172a] font-sans">
 
- <!-- Header -->
-<header class="flex flex-col md:flex-row items-center justify-between p-6 bg-gradient-to-r from-purple-700 via-blue-700 to-pink-600 text-white sticky top-0 z-10 shadow-lg rounded-b-xl">
-  
-  <!-- Logo + Title -->
-  <div class="flex items-center space-x-3 mb-4 md:mb-0">
-    <img src="assets/Gemini_Generated_Image_5nnm915nnm915nnm.ico" alt="ConcertEase Logo" class="w-12 h-12 rounded-full shadow-md">
-    <h1 class="text-2xl md:text-3xl font-bold tracking-wide text-yellow-400">ConcertEase</h1>
-  </div>
+<body class="bg-fixed bg-cover bg-center text-[#2b1b1b] flex flex-col min-h-screen"
+  style="background-image: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80');">
 
-  <!-- Navigation -->
-  <nav class="flex flex-wrap items-center gap-3 md:gap-4 text-sm md:text-base">
-    <a href="index.html" class="px-4 py-2 border border-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Home</a>
-    <a href="moodboard.html" class="px-4 py-2 border border-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">MoodBoard</a>
-    <a href="login.html" class="px-4 py-2 border border-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Login</a>
-    <a href="signup.html" class="px-4 py-2 border border-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">SignUp</a>
-  </nav>
+  <!-- HEADER -->
+  <?= view('components/header.php') ?>
 
-  <!-- Subtitle / Description -->
-  <div class="mt-4 md:mt-0 text-center md:text-left">
-    <h2 class="text-lg md:text-xl font-medium text-white/90">High-level plan & status of upcoming features</h2>
-  </div>
+  <!-- Page Wrapper -->
+  <div class="flex-grow bg-gradient-to-b from-[rgba(50,30,30,0.6)] to-[rgba(80,60,60,0.4)] px-4 py-10">
+    <div class="mx-auto max-w-5xl">
 
-</header>
+      <!-- Top Bar with Back Button -->
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-4xl text-white heading drop-shadow-sm">🎶 ConcertEase Roadmap</h1>
 
-
-  <!-- Filter Chips -->
-  <div class="max-w-6xl mx-auto px-6 mb-6">
-    <h2 class="font-medium mb-2">Filter by Status:</h2>
-    <div id="filter-chips" class="flex flex-wrap gap-3">
-      <span class="badge badge-active px-3 py-1 rounded-full text-sm font-semibold bg-yellow-100 text-yellow-700" data-status="All">All</span>
-      <span class="badge badge-planned px-3 py-1 rounded-full text-sm font-semibold" data-status="Planned">Planned</span>
-      <span class="badge badge-inprogress px-3 py-1 rounded-full text-sm font-semibold" data-status="In Progress">In Progress</span>
-      <span class="badge badge-backlog px-3 py-1 rounded-full text-sm font-semibold" data-status="Backlog">Backlog</span>
-      <span class="badge badge-done px-3 py-1 rounded-full text-sm font-semibold" data-status="Done">Done</span>
-    </div>
-  </div>
-
-  <!-- Roadmap Cards -->
-  <main class="max-w-6xl mx-auto px-6 pb-16">
-    <div class="grid md:grid-cols-12 gap-8">
-      <div class="md:col-span-1 hidden md:flex justify-center">
-        <div class="w-2 h-full timeline-line"></div>
+        <?= view('components/buttons/back_button', [
+          'href' => '/',
+          'label' => 'Back to Home'
+        ]) ?>
       </div>
 
-      <div class="md:col-span-11 space-y-6" id="roadmap-list">
+      <p class="text-[#f2e9e4] text-sm mb-10">
+        Explore ConcertEase’s feature roadmap — where live music meets modern booking convenience.
+      </p>
 
-        <!-- Example Cards -->
-        <div class="card-shadow bg-white border rounded-lg p-5 flex justify-between items-start hover:shadow-md transition" data-status="In Progress">
-          <div class="max-w-[78%]">
-            <h3 class="text-lg font-semibold text-[#112240]">Services CRUD (Concert Events)</h3>
-            <p class="text-sm text-gray-600 mt-1">Add, update, and deactivate concert events — artist, venue, date & ticket categories.</p>
-            <p class="text-xs text-gray-500 mt-3"><strong>Priority:</strong> High</p>
-            <div class="text-xs text-gray-500 mt-2">▸ Implementation pipeline</div>
-          </div>
-          <span class="px-3 py-1 rounded-full text-sm font-semibold badge-inprogress">In Progress</span>
-        </div>
+      <!-- Roadmap Cards -->
+      <div class="space-y-5">
+        <?= view('components/cards/roadmap_cards', [
+          "title" => "User Authentication System",
+          "description" => "Implement secure login, signup, and role-based access for admins and concertgoers.",
+          "status" => "In Progress",
+          "priority" => "High",
+          "statusClass" => "bg-yellow-400"
+        ]) ?>
 
-        <div class="card-shadow bg-white border rounded-lg p-5 flex justify-between items-start hover:shadow-md transition" data-status="Planned">
-          <div class="max-w-[78%]">
-            <h3 class="text-lg font-semibold text-[#112240]">User CRUD</h3>
-            <p class="text-sm text-gray-600 mt-1">Register users (attendees, organizers, admins), edit profiles, manage roles and deactivation.</p>
-            <p class="text-xs text-gray-500 mt-3"><strong>Priority:</strong> High</p>
-            <div class="text-xs text-gray-500 mt-2">▸ Implementation pipeline</div>
-          </div>
-          <span class="px-3 py-1 rounded-full text-sm font-semibold badge-planned">Planned</span>
-        </div>
+        <?= view('components/cards/roadmap_cards', [
+          "title" => "Concert Listings and Booking",
+          "description" => "Display upcoming concerts with real-time ticket availability and booking options.",
+          "status" => "In Progress",
+          "priority" => "High",
+          "statusClass" => "bg-yellow-400"
+        ]) ?>
 
-        <div class="card-shadow bg-white border rounded-lg p-5 flex justify-between items-start hover:shadow-md transition" data-status="Planned">
-          <div class="max-w-[78%]">
-            <h3 class="text-lg font-semibold text-[#112240]">Request CRUD (Ticket Booking)</h3>
-            <p class="text-sm text-gray-600 mt-1">Allow booking, viewing, updating and cancelling of tickets.</p>
-            <p class="text-xs text-gray-500 mt-3"><strong>Priority:</strong> High</p>
-            <div class="text-xs text-gray-500 mt-2">▸ Implementation pipeline</div>
-          </div>
-          <span class="px-3 py-1 rounded-full text-sm font-semibold badge-planned">Planned</span>
-        </div>
+        <?= view('components/cards/roadmap_cards', [
+          "title" => "Seat Selection Interface",
+          "description" => "Interactive seat maps for users to select specific seats during booking.",
+          "status" => "Planned",
+          "priority" => "Medium",
+          "statusClass" => "bg-blue-400"
+        ]) ?>
 
-        <div class="card-shadow bg-white border rounded-lg p-5 flex justify-between items-start hover:shadow-md transition" data-status="Backlog">
-          <div class="max-w-[78%]">
-            <h3 class="text-lg font-semibold text-[#112240]">Payment Gateway Integration</h3>
-            <p class="text-sm text-gray-600 mt-1">Integrate secure payments (cards, wallets) and handle transaction statuses.</p>
-            <p class="text-xs text-gray-500 mt-3"><strong>Priority:</strong> Medium</p>
-            <div class="text-xs text-gray-500 mt-2">▸ Implementation pipeline</div>
-          </div>
-          <span class="px-3 py-1 rounded-full text-sm font-semibold badge-backlog">Backlog</span>
-        </div>
+        <?= view('components/cards/roadmap_cards', [
+          "title" => "Payment Integration",
+          "description" => "Enable secure payments through GCash, PayPal, and credit cards.",
+          "status" => "Planned",
+          "priority" => "Medium",
+          "statusClass" => "bg-blue-400"
+        ]) ?>
 
-        <div class="card-shadow bg-white border rounded-lg p-5 flex justify-between items-start hover:shadow-md transition" data-status="Backlog">
-          <div class="max-w-[78%]">
-            <h3 class="text-lg font-semibold text-[#112240]">Feedback & Review System</h3>
-            <p class="text-sm text-gray-600 mt-1">User reviews, ratings, and event feedback for quality improvement.</p>
-            <p class="text-xs text-gray-500 mt-3"><strong>Priority:</strong> Low</p>
-            <div class="text-xs text-gray-500 mt-2">▸ Implementation pipeline</div>
-          </div>
-          <span class="px-3 py-1 rounded-full text-sm font-semibold badge-backlog">Backlog</span>
-        </div>
-
-        <div class="card-shadow bg-green-50 border rounded-lg p-5 flex justify-between items-start hover:shadow-md transition" data-status="Done">
-          <div class="max-w-[78%]">
-            <h3 class="text-lg font-semibold text-[#112240]">System Design & UI Mockups</h3>
-            <p class="text-sm text-gray-700 mt-1">Moodboard, landing page, sign-up, login mockups, and component library ready.</p>
-            <p class="text-xs text-gray-500 mt-1"><strong>Priority:</strong> High</p>
-            <div class="text-xs text-gray-500 mt-2">▸ Implementation pipeline</div>
-          </div>
-          <span class="px-3 py-1 rounded-full text-sm font-semibold badge-done">Done</span>
-        </div>
-
+        <?= view('components/cards/roadmap_cards', [
+          "title" => "User Feedback System",
+          "description" => "Allow attendees to rate concerts and leave feedback for future improvements.",
+          "status" => "Backlog",
+          "priority" => "Low",
+          "statusClass" => "bg-purple-500"
+        ]) ?>
       </div>
     </div>
-  </main>
+  </div>
 
-  <footer class="text-center text-gray-500 py-8 border-t border-gray-100">
-    © 2025 ConcertEase | Crafted for live music lovers 🎤
-  </footer>
-
-  <!-- JS Filter Logic -->
-  <script>
-    const chips = document.querySelectorAll('#filter-chips .badge');
-    const cards = document.querySelectorAll('#roadmap-list > div');
-
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        const status = chip.dataset.status;
-        chips.forEach(c => c.classList.remove('badge-active'));
-        chip.classList.add('badge-active');
-
-        cards.forEach(card => {
-          if (status === 'All' || card.dataset.status === status) {
-            card.style.display = 'flex';
-            card.classList.add('opacity-100');
-            card.classList.remove('opacity-0');
-          } else {
-            card.classList.add('opacity-0');
-            setTimeout(() => card.style.display = 'none', 200);
-          }
-        });
-      });
-    });
-  </script>
+  <!-- FOOTER -->
+  <?= view('components/footer.php') ?>
 
 </body>
 </html>
