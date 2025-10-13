@@ -1,3 +1,3 @@
-<footer class="bg-black/40 text-center text-gray-300 py-4">
-  © 2025 ConcertEase — All Rights Reserved.
+<footer class="bg-black bg-opacity-40 py-6 text-sm text-center">
+    © 2025 ConcertEase — All Rights Reserved.
 </footer>
