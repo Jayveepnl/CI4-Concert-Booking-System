@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -49,16 +50,16 @@
   </style>
 </head>
 
-<body class="min-h-screen flex flex-col">
+<body class="flex flex-col min-h-screen">
 
   <!-- Header -->
   <?= view('components/header') ?>
 
   <!-- Hero Section -->
-  <section class="hero flex flex-col justify-center items-center text-center px-6">
-    <div class="hero-content max-w-3xl">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Experience the Music Like Never Before</h1>
-      <p class="text-lg text-gray-200 mb-10">
+  <section class="flex flex-col justify-center items-center px-6 text-center hero">
+    <div class="max-w-3xl hero-content">
+      <h1 class="mb-6 font-extrabold text-5xl md:text-6xl">Experience the Music Like Never Before</h1>
+      <p class="mb-10 text-gray-200 text-lg">
         Book your favorite concerts, discover new artists, and feel the rhythm — all from one platform.
       </p>
 
@@ -66,44 +67,46 @@
   </section>
 
   <!-- Upcoming Events -->
-  <section id="events" class="py-20 text-center bg-black/30">
-    <h2 class="text-4xl font-bold mb-10">Upcoming Concerts</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
+  <section id="events" class="bg-black/30 py-20 text-center">
+    <h2 class="mb-10 font-bold text-4xl">Upcoming Concerts</h2>
+    <div class="gap-10 grid sm:grid-cols-2 lg:grid-cols-3 mx-auto px-6 max-w-6xl">
 
       <?= view('components/cards/landingpage-card', [
-          'title' => 'Jason Derulo',
-          'excerpt' => 'November 22, 2025 — SM Mall of Asia',
-          'image' => 'https://images1.smtickets.com/images/portrait_27052025194947.jpg',
-          'href' => 'booking.php'
+        'title' => 'Jason Derulo',
+        'excerpt' => 'November 22, 2025 — SM Mall of Asia',
+        'image' => 'https://images1.smtickets.com/images/portrait_27052025194947.jpg',
+        'href' => 'booking.php'
       ]) ?>
 
       <?= view('components/cards/landingpage-card', [
-          'title' => 'BlackPink World Tour',
-          'excerpt' => 'November 22, 2025 — SM Mall of Asia',
-          'image' => 'https://images1.smtickets.com/images/portrait_23072025231047.jpg',
-          'href' => 'booking.php'
+        'title' => 'BlackPink World Tour',
+        'excerpt' => 'November 22, 2025 — SM Mall of Asia',
+        'image' => 'https://images1.smtickets.com/images/portrait_23072025231047.jpg',
+        'href' => 'booking.php'
       ]) ?>
 
       <?= view('components/cards/landingpage-card', [
-          'title' => 'Doja Cat',
-          'excerpt' => 'December 7, 2025 — SM Mall of Asia',
-          'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc6jcTKGJKRKcXmB2NZZY9Eju0l0LdptdCpw&s',
-          'href' => 'booking.php'
+        'title' => 'Doja Cat',
+        'excerpt' => 'December 7, 2025 — SM Mall of Asia',
+        'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc6jcTKGJKRKcXmB2NZZY9Eju0l0LdptdCpw&s',
+        'href' => 'booking.php'
       ]) ?>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-16 text-center bg-black/40">
-    <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
-    <p class="text-gray-300 mb-6">Have questions or need help with your booking? Reach out to 
+  <section id="contact" class="bg-black/40 py-16 text-center">
+    <h3 class="mb-6 font-bold text-3xl">Contact Us</h3>
+    <p class="mb-6 text-gray-300">Have questions or need help with your booking? Reach out to
       <span class="text-yellow-300">support@concertease.com</span>.
     </p>
     <a href="mailto:support@concertease.com" class="btn">Email Us</a>
   </section>
 
   <!-- Footer -->
-  <?= view('components/footer') ?>
-
+  <footer class="bg-black bg-opacity-40 py-6 text-sm text-center">
+    © 2025 ConcertEase — All Rights Reserved.
+  </footer>
 </body>
+
 </html>

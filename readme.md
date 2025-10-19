@@ -54,13 +54,6 @@ welcome to ConcertEase, the ultimate platform for booking concerts and live even
 
 ## Overview
 
-This template provides a **minimal CodeIgniter 4 project layout** with conventions for file organization, commit practices, and simple modules.
-
-It is designed to be **easy to start with** and a **reference for adding new features**.
-
-* **Purpose**: a clean starting point for CI4 apps.
-* **Audience**: developers who want a predictable structure and quick onboarding.
-
 ### Key Components
 
 These are **sample modules** included (or suggested) for learning how to add features:
@@ -70,6 +63,7 @@ These are **sample modules** included (or suggested) for learning how to add fea
 | **Auth (Sample)**         | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
 | **CRUD Module**           | Example entity (`Posts` or `Tasks`) with create/read/update/delete. | Demonstrates Controller → Service → Repository pattern. |
 | **Scheduler (Sample)**    | Simple to-do list with due dates.                                   | Shows how to extend with new tables and services.       |
+| **Button Component**      | Reusable UI button for navigation and actions.                      | Located at `app/Views/components/button/landingpage-button.php`. Use via `<?= view('components/button/landingpage-button', [...]) ?>`. |
 
  <!-- ! Start simple. Use these modules as **learning samples**; extend or replace them based on your project’s needs. -->
 
@@ -156,8 +150,6 @@ Defaults used in this project (host mapping):
 | Service     | Host port |
 |-------------|-----------:|
 | nginx (app) | 8090      |
-| phpMyAdmin  | 8091      |
-| MySQL       | 3390      |
 
 Database credentials used in examples and CI:
 
