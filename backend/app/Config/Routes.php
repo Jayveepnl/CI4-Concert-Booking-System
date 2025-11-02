@@ -11,6 +11,8 @@ $routes->get('/MoodBoard', 'Users::MoodBoard');
 $routes->get('/RoadMap', 'Users::RoadMap');
 $routes->get('/SignUp', 'Users::SignUp');
 $routes->get('/login', 'Users::Login');
+$routes->get('/Service', 'Users::ServicePage');
+$routes->get('/DashboardAdminPage', 'Users::DashboardAdminPage');
 
 $routes->get('/index.html', 'Users::index');
 $routes->get('/moodboard.html', 'Users::MoodBoard');
