@@ -35,4 +35,8 @@ class Users extends BaseController
     {
         return view('users/ServicePage');
     }
+    public function AccountPage()
+    {
+        return view('users/AccountPage');
+    }
 }
