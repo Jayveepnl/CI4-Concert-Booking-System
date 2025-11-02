@@ -39,4 +39,8 @@ class Users extends BaseController
     {
         return view('users/AccountPage');
     }
+    public function RequestPage()
+    {
+        return view('users/RequestPage');
+    }
 }
