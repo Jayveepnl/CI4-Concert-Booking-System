@@ -1,99 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>ConcertEase | Online Concert Booking</title>
+  <link rel="shortcut icon" type="image/png" href="/assets/Gemini_Generated_Image_5nnm915nnm915nnm.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background: linear-gradient(to bottom, #1e1b4b, #6d28d9, #db2777);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero {
+      background: url('https://wallpapers.com/images/featured/concert-background-dd0syeox7rmi78l0.jpg') no-repeat center center/cover;
+      position: relative;
+      height: 90vh;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.75rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      transition: 0.3s;
+      border: 2px solid #facc15;
+      color: #facc15;
+    }
+
+    .btn:hover {
+      background-color: #facc15;
+      color: #000;
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-b from-indigo-900 via-purple-800 to-pink-600 text-white font-sans min-h-screen">
-  <!-- Navbar -->
-  <header class="flex items-center justify-between p-6 bg-black bg-opacity-30 backdrop-blur-md sticky top-0 z-10">
-    <h1 class="text-2xl font-bold tracking-wide">🎵 ConcertEase</h1>
-    <nav class="flex items-center space-x-6 text-sm">
-      <a href="#home" class="hover:text-yellow-300">Home</a>
-      <a href="#events" class="hover:text-yellow-300">Upcoming</a>
-      <a href="#contact" class="hover:text-yellow-300">Contact</a>
 
-      <!-- Added Buttons -->
-      <a href="moodboard.html" class="px-4 py-2 border border-yellow-400 text-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Moodboard</a>
-      <a href="roadmap.html" class="px-4 py-2 border border-yellow-400 text-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Roadmap</a>
+<body class="flex flex-col min-h-screen">
 
-      <!-- Existing Buttons -->
-      <a href="login.html" class="px-4 py-2 border border-yellow-400 text-yellow-400 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Login</a>
-      <a href="signup.html" class="px-4 py-2 bg-yellow-400 text-black rounded-full font-semibold hover:bg-yellow-300 transition">Sign Up</a>
-    </nav>
-  </header>
+  <!-- Header -->
+  <?= view('components/header') ?>
 
   <!-- Hero Section -->
-  <section 
-    id="home" 
-    class="relative flex flex-col items-center justify-center text-center h-[90vh] px-6 bg-cover bg-center bg-no-repeat" 
-    style="background-image: url('https://wallpapers.com/images/featured/concert-background-dd0syeox7rmi78l0.jpg');">
-
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-
-    <div class="relative z-10 flex flex-col items-center text-center">
-      <h2 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-white drop-shadow-lg">
-        Experience the Music Like Never Before
-      </h2>
-      <p class="max-w-2xl mx-auto text-lg text-gray-200 mb-8 text-center">
+  <section class="flex flex-col justify-center items-center px-6 text-center hero">
+    <div class="max-w-3xl hero-content">
+      <h1 class="mb-6 font-extrabold text-5xl md:text-6xl">Experience the Music Like Never Before</h1>
+      <p class="mb-10 text-gray-200 text-lg">
         Book your favorite concerts, discover new artists, and feel the rhythm — all from one platform.
       </p>
-      <a href="booking.html" 
-        class="px-8 py-3 bg-yellow-400 text-black rounded-full text-lg font-semibold hover:bg-yellow-300 transition">
-        Get Tickets
-      </a>
+
     </div>
   </section>
 
+  <!-- Upcoming Events -->
+  <section id="events" class="bg-black/30 py-20 text-center">
+    <h2 class="mb-10 font-bold text-4xl">Upcoming Concerts</h2>
+    <div class="gap-10 grid sm:grid-cols-2 lg:grid-cols-3 mx-auto px-6 max-w-6xl">
 
-  <!-- Upcoming Events Section -->
-  <section id="events" class="py-20 text-center">
-    <h3 class="text-4xl font-extrabold mb-8">Upcoming Concerts</h3>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
-      <div class="bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-        <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
-          <img src="https://images1.smtickets.com/images/portrait_27052025194947.jpg" alt="Jason Derulo" class="h-full object-cover rounded-lg">
-        </div>
-        <h4 class="text-2xl font-semibold">Jason Derulo</h4>
-        <p class="text-gray-300 text-sm mb-4">November 22, 2025 — SM Mall of Asia</p>
-        <a href="booking.html" class="px-4 py-2 bg-yellow-400 text-black rounded-full text-sm font-semibold hover:bg-yellow-300">Book Now</a>
-      </div>
+      <?= view('components/cards/landingpage-card', [
+        'title' => 'Jason Derulo',
+        'excerpt' => 'November 22, 2025 — SM Mall of Asia',
+        'image' => 'https://images1.smtickets.com/images/portrait_27052025194947.jpg',
+        'href' => 'booking.php'
+      ]) ?>
 
-      <div class="bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-        <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
-          <img src="https://images1.smtickets.com/images/portrait_23072025231047.jpg" alt="BlackPink" class="h-full object-cover rounded-lg">
-        </div>
-        <h4 class="text-2xl font-semibold">BlackPink World Tour</h4>
-        <p class="text-gray-300 text-sm mb-4">November 22, 2025 — SM Mall of Asia</p>
-        <a href="booking.html" class="px-4 py-2 bg-yellow-400 text-black rounded-full text-sm font-semibold hover:bg-yellow-300">Book Now</a>
-      </div>
+      <?= view('components/cards/landingpage-card', [
+        'title' => 'BlackPink World Tour',
+        'excerpt' => 'November 22, 2025 — SM Mall of Asia',
+        'image' => 'https://images1.smtickets.com/images/portrait_23072025231047.jpg',
+        'href' => 'booking.php'
+      ]) ?>
 
-      <div class="bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-        <div class="overflow-hidden rounded-lg mb-4 h-[420px] flex justify-center">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc6jcTKGJKRKcXmB2NZZY9Eju0l0LdptdCpw&s" alt="Doja Cat" class="h-full object-cover rounded-lg">
-        </div>
-        <h4 class="text-2xl font-semibold">Doja Cat</h4>
-        <p class="text-gray-300 text-sm mb-4">December 7, 2025 — SM Mall of Asia</p>
-        <a href="booking.html" class="px-4 py-2 bg-yellow-400 text-black rounded-full text-sm font-semibold hover:bg-yellow-300">Book Now</a>
-      </div>
+      <?= view('components/cards/landingpage-card', [
+        'title' => 'Doja Cat',
+        'excerpt' => 'December 7, 2025 — SM Mall of Asia',
+        'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc6jcTKGJKRKcXmB2NZZY9Eju0l0LdptdCpw&s',
+        'href' => 'booking.php'
+      ]) ?>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-black bg-opacity-30 text-center">
-    <h3 class="text-3xl font-bold mb-8">Contact Us</h3>
-    <p class="max-w-xl mx-auto text-gray-300 mb-8">
-      Have questions or need help with your booking? Reach out to our team anytime at 
+  <!-- Contact -->
+  <section id="contact" class="bg-black/40 py-16 text-center">
+    <h3 class="mb-6 font-bold text-3xl">Contact Us</h3>
+    <p class="mb-6 text-gray-300">Have questions or need help with your booking? Reach out to
       <span class="text-yellow-300">support@concertease.com</span>.
     </p>
-    <a href="mailto:support@concertease.com" class="px-6 py-2 bg-yellow-400 text-black rounded-full font-semibold hover:bg-yellow-300">Email Us</a>
+    <a href="mailto:support@concertease.com" class="btn">Email Us</a>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-6 text-sm bg-black bg-opacity-40">
+  <footer class="bg-black bg-opacity-40 py-6 text-sm text-center">
     © 2025 ConcertEase — All Rights Reserved.
   </footer>
 </body>
+
 </html>

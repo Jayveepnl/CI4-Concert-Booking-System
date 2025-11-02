@@ -27,4 +27,8 @@ class Users extends BaseController
     {
         return view('users/Login');
     }
+    public function DashboardAdminPage()
+    {
+        return view('users/DashboardAdminPage');
+    }
 }
