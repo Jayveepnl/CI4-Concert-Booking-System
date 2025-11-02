@@ -80,13 +80,11 @@
                 <a href="#" class="menu-item"> User Management</a>
                 <a href="#" class="menu-item"> Ticket Bookings</a>
                 <a href="#" class="menu-item"> Payment Management</a>
-                <a href="#" class="menu-item"> Feedback & Reviews</a>
-                <a href="#" class="menu-item"> System Settings</a>
             </nav>
         </div>
 
         <div class="mt-10">
-            <a href="index.html" class="w-full text-center btn">← Back to Home</a>
+            <a href="/landingPage" class="w-full text-center btn">← Back to Home</a>
         </div>
     </aside>
 
@@ -141,18 +139,6 @@
                 <h3 class="mb-2 font-semibold text-yellow-400 text-xl"> Payment Management</h3>
                 <p class="mb-4 text-white/80 text-sm">Track all user payments and verify transaction statuses per event.</p>
                 <a href="#" class="btn">Check Payments</a>
-            </div>
-
-            <div class="card">
-                <h3 class="mb-2 font-semibold text-yellow-400 text-xl"> Feedback & Reviews</h3>
-                <p class="mb-4 text-white/80 text-sm">Read and moderate user reviews for each event to improve quality.</p>
-                <a href="#" class="btn">View Feedback</a>
-            </div>
-
-            <div class="card">
-                <h3 class="mb-2 font-semibold text-yellow-400 text-xl"> System Settings</h3>
-                <p class="mb-4 text-white/80 text-sm">Update admin account info, password, and website configurations.</p>
-                <a href="#" class="btn">Edit Settings</a>
             </div>
         </section>
     </main>
