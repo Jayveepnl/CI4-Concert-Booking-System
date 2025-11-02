@@ -27,8 +27,8 @@ class Users extends BaseController
     {
         return view('users/Login');
     }
-    public function BookingPage()
+    public function DashboardAdminPage()
     {
-        return view('users/BookingPage');
+        return view('users/DashboardAdminPage');
     }
 }
