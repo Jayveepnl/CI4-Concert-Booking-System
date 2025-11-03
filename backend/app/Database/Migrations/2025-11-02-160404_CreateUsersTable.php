@@ -77,10 +77,13 @@ class CreateUsersTable extends Migration
                 'null' => true,
             ],
         ]);
+        $this->forge->addKey('id', true);
+        $this->forge->adduniquekey('email');
+        $this->forge->createTable('users', true);
     }
 
     public function down()
     {
-        //
+        this->forge->dropTable('users', true);
     }
 }
