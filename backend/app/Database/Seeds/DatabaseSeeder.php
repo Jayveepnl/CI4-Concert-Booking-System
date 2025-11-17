@@ -20,8 +20,6 @@ class UsersSeeder extends Seeder
     public function run()
     {
         $now = date('Y-m-d H:i:s');
-        // if you want password that is hashed
-        $password = password_hash('Password123!', PASSWORD_DEFAULT);
 
         // no need to add id since its auto increment
         $dataYouWannaInsert = [
@@ -30,7 +28,7 @@ class UsersSeeder extends Seeder
                 'middle_name' => 'Opeda',
                 'last_name' => 'Panol',
                 'email' => 'panoljayvee@gmail.com',
-                'password_hash' => '123pass',
+                'password_hash' => password_hash('Password123!', PASSWORD_DEFAULT),
                 'type' => 'admin',
                 'created_at' => $now,
                 'updated_at' => $now,
@@ -40,14 +38,14 @@ class UsersSeeder extends Seeder
                 'middle_name' => 'vee',
                 'last_name' => 'lonap',
                 'email' => 'jayVpnl@gmail.com',
-                'password_hash' => 'passd321',
+                'password_hash' => password_hash('Password123!', PASSWORD_DEFAULT),
                 'type' => 'client',
                 'created_at' => $now,
                 'updated_at' => $now,
             ],
         ];
 
-        $this->db->table('adminusers')->insertBatch($dataYouWannaInsert);
+        $this->db->table('users')->insertBatch($data);
     }
 }
 
