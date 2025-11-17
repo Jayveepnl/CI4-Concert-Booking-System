@@ -9,8 +9,6 @@ class UsersSeeder extends Seeder
     public function run()
     {
         $now = date('Y-m-d H:i:s');
-        // if you want password that is hashed
-        $password = password_hash('Password123!', PASSWORD_DEFAULT);
 
         // no need to add id since its auto increment
         $users = [
@@ -19,7 +17,7 @@ class UsersSeeder extends Seeder
                 'middle_name' => 'Opeda',
                 'last_name' => 'Panol',
                 'email' => 'jayveepanol@gmail.com',
-                'password_hash' => $Password123,
+                'password_hash' => password_hash('Password123!', PASSWORD_DEFAULT),
                 'type' => 'admin',
                 'created_at' => $now,
                 'updated_at' => $now,
@@ -29,7 +27,7 @@ class UsersSeeder extends Seeder
                 'middle_name' => 'vee',
                 'last_name' => 'pnl',
                 'email' => 'jayvpnl@gmail.com',
-                'password_hash' => $Password123,
+                'password_hash' => password_hash('Password123!', PASSWORD_DEFAULT),
                 'type' => 'client',
                 'created_at' => $now,
                 'updated_at' => $now,
