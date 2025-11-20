@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -16,6 +17,7 @@
       display: flex;
       flex-direction: column;
     }
+
     .login-container {
       flex-grow: 1;
       display: flex;
@@ -23,28 +25,33 @@
       justify-content: center;
       padding: 2rem;
     }
+
     .login-card {
       background: rgba(0, 0, 0, 0.4);
       border-radius: 1rem;
       padding: 2.5rem;
-      max-width: 400px;
+      max-width: 420px;
       width: 100%;
-      text-align: center;
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
     }
-    input {
+
+    .input-field {
       width: 100%;
       padding: 0.75rem;
-      border-radius: 0.5rem;
-      background: rgba(255, 255, 255, 0.2);
+      border-radius: 0.75rem;
+      background: rgba(255, 255, 255, 0.15);
       color: white;
-      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: 0.2s;
+    }
+
+    .input-field:focus {
       outline: none;
+      border-color: #facc15;
+      box-shadow: 0 0 5px #facc15;
     }
-    input:focus {
-      outline: 2px solid #facc15;
-    }
-    button {
+
+    .btn-login {
       width: 100%;
       background-color: #facc15;
       color: #000;
@@ -53,7 +60,8 @@
       padding: 0.75rem;
       transition: 0.3s;
     }
-    button:hover {
+
+    .btn-login:hover {
       background-color: #fde047;
     }
   </style>
@@ -64,38 +72,57 @@
 
   <section class="login-container">
     <div class="login-card">
-      <h2 class="text-2xl font-bold mb-4 text-yellow-300">Welcome Back to ConcertEase</h2>
-      <p class="text-gray-300 mb-6 text-sm">Login to book your favorite concerts and manage your account.</p>
+      <h2 class="mb-2 font-bold text-yellow-300 text-2xl text-center">Welcome Back to ConcertEase</h2>
+      <p class="mb-6 text-gray-300 text-sm text-center">Login to book your favorite concerts and manage your account.</p>
 
-      <form action="#" method="POST" class="space-y-4 text-left">
+      <!-- Updated Form Based on Reference -->
+      <form action="/login" method="POST" class="space-y-6 text-left">
+        <?= csrf_field() ?>
+
+        <!-- Email -->
         <div>
-          <label for="email" class="text-sm block mb-1">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          <label class="block mb-1 font-medium text-yellow-300">Email Address</label>
+          <input type="email" name="email" placeholder="Enter your email"
+            value="<?= esc($old['email'] ?? '') ?>"
+            class="input-field <?= isset($errors['email']) ? 'border-red-500' : '' ?>" />
+          <?php if (!empty($errors['email'])): ?>
+            <p class="mt-1 text-red-400 text-sm"><?= esc($errors['email']) ?></p>
+          <?php endif; ?>
         </div>
 
+        <!-- Password -->
         <div>
-          <label for="password" class="text-sm block mb-1">Password</label>
-          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+          <label class="block mb-1 font-medium text-yellow-300">Password</label>
+          <input type="password" name="password" placeholder="Enter your password"
+            class="input-field <?= isset($errors['password']) ? 'border-red-500' : '' ?>" />
+          <?php if (!empty($errors['password'])): ?>
+            <p class="mt-1 text-red-400 text-sm"><?= esc($errors['password']) ?></p>
+          <?php endif; ?>
         </div>
 
-        <div class="flex items-center justify-between text-sm mt-2">
-          <label><input type="checkbox" class="accent-yellow-400 mr-1"> Remember me</label>
-          <a href="#" class="text-yellow-300 hover:underline">Forgot password?</a>
+        <!-- Forgot Password -->
+        <div class="text-sm text-right">
+          <a href="/forgot-password" class="font-medium text-yellow-300 hover:text-yellow-400">Forgot password?</a>
         </div>
 
-        <button type="submit" class="mt-4">Login</button>
+        <!-- Login Button -->
+        <button type="submit" class="btn-login">Login</button>
+
+        <!-- Sign Up -->
+        <p class="mt-4 text-gray-300 text-sm text-center">
+          Don’t have an account?
+          <a href="/SignUp" class="font-semibold text-yellow-300 hover:text-yellow-400">Sign Up</a>
+        </p>
       </form>
 
-      <div class="mt-6 text-sm text-gray-300">
-        Don’t have an account?
-        <a href="/SignUp" class="text-yellow-300 font-semibold hover:underline">Sign Up</a>
-      <?= view('components/buttons/back_button', [
-    'href' => '/',
-    'label' => 'Back to Home'
-  ]) ?>
+      <div class="mt-4">
+        <?= view('components/buttons/back_button', ['href' => '/', 'label' => 'Back to Home']) ?>
+      </div>
 
+    </div>
   </section>
 
   <?= view('components/footer') ?>
 </body>
+
 </html>

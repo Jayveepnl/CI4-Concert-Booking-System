@@ -75,7 +75,7 @@ class Auth extends BaseController
 
         if ($type === 'admin') {
             // Managers go to admin dashboard
-            return redirect()->to('/admin/adminDashboard');
+            return redirect()->to('/admin/dashboard');
         }
 
         if ($type === 'client') {

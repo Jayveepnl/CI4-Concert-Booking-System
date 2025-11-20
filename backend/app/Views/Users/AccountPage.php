@@ -77,7 +77,7 @@
             <h1 class="font-bold text-yellow-400 text-3xl">Admin Account</h1>
             <p class="text-white/70 text-sm">View and update your account details below.</p>
         </div>
-        <a href="/DashboardAdminPage" class="btn">← Back to Dashboard</a>
+        <a href="/admin/dashboard" class="btn">← Back to Dashboard</a>
     </header>
 
     <!-- Account Form -->

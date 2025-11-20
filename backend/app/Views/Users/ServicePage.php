@@ -85,7 +85,7 @@
             <p class="text-white/70 text-sm">Add, update, or delete concerts from the system.</p>
         </div>
         <div class="flex gap-3">
-            <a href="admin/DashboardAdminPage" class="btn">← Back to Dashboard</a>
+            <a href="/admin/dashboard" class="btn">← Back to Dashboard</a>
             <button class="bg-yellow-400 hover:bg-yellow-300 border-none text-black btn">+ Add New Concert</button>
         </div>
     </header>
