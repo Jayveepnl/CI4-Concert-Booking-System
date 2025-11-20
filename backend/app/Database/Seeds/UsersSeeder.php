@@ -4,17 +4,6 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
-{
-    public function run()
-    {
-        $this->call('App\\Database\\Seeds\\ClearDatabaseSeeder');
-<?php
-
-namespace App\Database\Seeds;
-
-use CodeIgniter\Database\Seeder;
-
 class UsersSeeder extends Seeder
 {
     public function run()
@@ -22,12 +11,12 @@ class UsersSeeder extends Seeder
         $now = date('Y-m-d H:i:s');
 
         // no need to add id since its auto increment
-        $dataYouWannaInsert = [
+        $users = [
             [
                 'first_name' => 'Jayvee',
                 'middle_name' => 'Opeda',
                 'last_name' => 'Panol',
-                'email' => 'panoljayvee@gmail.com',
+                'email' => 'jayveepanol@gmail.com',
                 'password_hash' => password_hash('Password123!', PASSWORD_DEFAULT),
                 'type' => 'admin',
                 'created_at' => $now,
@@ -36,8 +25,8 @@ class UsersSeeder extends Seeder
             [
                 'first_name' => 'Jay',
                 'middle_name' => 'vee',
-                'last_name' => 'lonap',
-                'email' => 'jayVpnl@gmail.com',
+                'last_name' => 'pnl',
+                'email' => 'jayvpnl@gmail.com',
                 'password_hash' => password_hash('Password123!', PASSWORD_DEFAULT),
                 'type' => 'client',
                 'created_at' => $now,
@@ -45,6 +34,6 @@ class UsersSeeder extends Seeder
             ],
         ];
 
-        $this->db->table('users')->insertBatch($data);
+        $this->db->table('users')->insertBatch($users);
     }
 }

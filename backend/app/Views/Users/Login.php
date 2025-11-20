@@ -4,59 +4,98 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ConcertEase | Login</title>
+  <link rel="shortcut icon" type="image/png" href="/assets/Gemini_Generated_Image_5nnm915nnm915nnm.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background: linear-gradient(to bottom, #1e1b4b, #6d28d9, #db2777);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .login-container {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .login-card {
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    }
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: none;
+      outline: none;
+    }
+    input:focus {
+      outline: 2px solid #facc15;
+    }
+    button {
+      width: 100%;
+      background-color: #facc15;
+      color: #000;
+      font-weight: 600;
+      border-radius: 9999px;
+      padding: 0.75rem;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #fde047;
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-b from-indigo-900 via-purple-800 to-pink-600 text-white font-sans min-h-screen flex items-center justify-center">
 
-  <!-- Login Card -->
-  <div class="bg-black bg-opacity-40 p-10 rounded-2xl shadow-2xl w-full max-w-md text-center">
-    <h1 class="text-3xl font-extrabold mb-6">🎵 Welcome Back to ConcertEase</h1>
-    <p class="text-gray-300 mb-8 text-sm">Login to book your favorite concerts and manage your account.</p>
+<body>
+  <?= view('components/header') ?>
 
-    <!-- Login Form -->
-    <form action="#" method="POST" class="space-y-5 text-left">
-      <div>
-        <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
-        <input type="email" id="email" name="email" required 
-               class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-      </div>
+  <section class="login-container">
+    <div class="login-card">
+      <h2 class="text-2xl font-bold mb-4 text-yellow-300">Welcome Back to ConcertEase</h2>
+      <p class="text-gray-300 mb-6 text-sm">Login to book your favorite concerts and manage your account.</p>
 
-      <div>
-        <label for="password" class="block text-sm font-medium mb-2">Password</label>
-        <input type="password" id="password" name="password" required 
-               class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-      </div>
+      <form action="#" method="POST" class="space-y-4 text-left">
+        <div>
+          <label for="email" class="text-sm block mb-1">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
 
-      <div class="flex items-center justify-between mt-4">
-        <label class="flex items-center text-sm">
-          <input type="checkbox" class="mr-2 accent-yellow-400">
-          Remember me
-        </label>
-        <a href="#" class="text-sm text-yellow-300 hover:underline">Forgot password?</a>
-      </div>
+        <div>
+          <label for="password" class="text-sm block mb-1">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
 
-      <button type="submit" 
-              class="w-full mt-6 bg-yellow-400 text-black font-semibold py-3 rounded-full hover:bg-yellow-300 transition">
-        Sign In
-      </button>
-    </form>
+        <div class="flex items-center justify-between text-sm mt-2">
+          <label><input type="checkbox" class="accent-yellow-400 mr-1"> Remember me</label>
+          <a href="#" class="text-yellow-300 hover:underline">Forgot password?</a>
+        </div>
 
-    <!-- Divider -->
-    <div class="mt-6 flex items-center justify-center">
-      <div class="h-px bg-gray-500 w-1/3"></div>
-      <span class="mx-3 text-gray-400 text-sm">or</span>
-      <div class="h-px bg-gray-500 w-1/3"></div>
-    </div>
+        <button type="submit" class="mt-4">Login</button>
+      </form>
 
-    <!-- Sign up link -->
-    <p class="mt-6 text-gray-300 text-sm">
-      Don’t have an account? 
-      <a href="signup.html" class="text-yellow-300 font-semibold hover:underline">Sign Up</a>
-    </p>
+      <div class="mt-6 text-sm text-gray-300">
+        Don’t have an account?
+        <a href="/SignUp" class="text-yellow-300 font-semibold hover:underline">Sign Up</a>
+      <?= view('components/buttons/back_button', [
+    'href' => '/',
+    'label' => 'Back to Home'
+  ]) ?>
 
-    <!-- Back to home -->
-    <a href="index.html" class="block mt-6 text-sm text-yellow-400 hover:underline">← Back to Home</a>
-  </div>
+  </section>
 
+  <?= view('components/footer') ?>
 </body>
 </html>

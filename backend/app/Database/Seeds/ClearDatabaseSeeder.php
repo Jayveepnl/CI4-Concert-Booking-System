@@ -11,8 +11,8 @@ class ClearDatabaseSeeder extends Seeder
         $db = \Config\Database::connect();
 
         // Order matters: child tables first, then parents
-        // List down your tables here
-        $tablesInOrder = [];
+        // requests → depends on users, services
+        $tablesInOrder = ['users'];
 
         $db->disableForeignKeyChecks();
 

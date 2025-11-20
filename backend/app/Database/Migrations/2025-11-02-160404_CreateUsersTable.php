@@ -46,12 +46,6 @@ class CreateUsersTable extends Migration
                 'default'    => 'client',
                 'null'       => false,
             ],
-            'account_status' => [
-                'type'       => 'TINYINT',
-                'constraint' => 1,
-                'default'    => 1, // 1 = active, 0 = inactive
-                'null'       => false,
-            ],
             'email_activated' => [
                 'type'       => 'TINYINT',
                 'constraint' => 1,
@@ -77,10 +71,13 @@ class CreateUsersTable extends Migration
                 'null' => true,
             ],
         ]);
+        $this->forge->addKey('id', true);
+        $this->forge->adduniquekey('email');
+        $this->forge->createTable('users', true);
     }
 
     public function down()
     {
-        //
+        this->forge->dropTable('users', true);
     }
 }
