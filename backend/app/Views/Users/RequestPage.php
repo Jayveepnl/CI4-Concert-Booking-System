@@ -79,7 +79,7 @@
             <h1 class="font-bold text-yellow-400 text-3xl">Ticket Requests</h1>
             <p class="text-white/70 text-sm">Manage concert ticket booking requests below.</p>
         </div>
-        <a href="admin/DashboardAdminPage" class="btn">← Back to Dashboard</a>
+        <a href="admin/dashboard" class="btn">← Back to Dashboard</a>
     </header>
 
     <!-- Request Table -->
