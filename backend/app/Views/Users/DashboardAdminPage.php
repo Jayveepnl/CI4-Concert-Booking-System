@@ -76,10 +76,10 @@
 
             <nav class="space-y-2">
                 <a href="#" class="menu-item"> Dashboard Overview</a>
-                <a href="#" class="menu-item"> Manage Concert Events</a>
-                <a href="#" class="menu-item"> User Management</a>
-                <a href="#" class="menu-item"> Ticket Bookings</a>
-                <a href="#" class="menu-item"> Payment Management</a>
+                <a href="/Service" class="menu-item"> Manage Concert Events</a>
+                <a href="/AccountPage" class="menu-item"> User Management</a>
+                <a href="/Request" class="menu-item"> Ticket Bookings</a>
+                <a href="/Payment" class="menu-item"> Payment Management</a>
             </nav>
         </div>
 
@@ -120,25 +120,25 @@
             <div class="card">
                 <h3 class="mb-2 font-semibold text-yellow-400 text-xl"> Manage Concert Events</h3>
                 <p class="mb-4 text-white/80 text-sm">Add, update, and deactivate concert events such as artist, venue, and ticket categories.</p>
-                <a href="#" class="btn">Go to Events</a>
+                <a href="/Service" class="btn">Go to Events</a>
             </div>
 
             <div class="card">
                 <h3 class="mb-2 font-semibold text-yellow-400 text-xl"> User Management</h3>
                 <p class="mb-4 text-white/80 text-sm">Manage attendees, organizers, and admins. Edit roles or deactivate users.</p>
-                <a href="#" class="btn">Manage Users</a>
+                <a href="/AccountPage" class="btn">Manage Users</a>
             </div>
 
             <div class="card">
                 <h3 class="mb-2 font-semibold text-yellow-400 text-xl"> Ticket Booking Requests</h3>
                 <p class="mb-4 text-white/80 text-sm">Approve, modify, or cancel ticket bookings, and track pending requests.</p>
-                <a href="#" class="btn">View Bookings</a>
+                <a href="/Request" class="btn">View Bookings</a>
             </div>
 
             <div class="card">
                 <h3 class="mb-2 font-semibold text-yellow-400 text-xl"> Payment Management</h3>
                 <p class="mb-4 text-white/80 text-sm">Track all user payments and verify transaction statuses per event.</p>
-                <a href="#" class="btn">Check Payments</a>
+                <a href="/Payment" class="btn">Check Payments</a>
             </div>
         </section>
     </main>
