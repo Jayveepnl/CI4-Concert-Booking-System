@@ -47,4 +47,8 @@ class Users extends BaseController
     {
         return view('users/RequestPage');
     }
+    public function PaymentPage()
+    {
+        return view('users/PaymentPage');
+    }
 }

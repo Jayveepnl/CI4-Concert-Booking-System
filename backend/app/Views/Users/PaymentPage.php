@@ -74,7 +74,11 @@
             </div>
 
             <nav class="space-y-2">
+<<<<<<< HEAD
                 <a class="menu-item" href="/admin/dashboard">Dashboard Overview</a>
+=======
+                <a class="menu-item" href="/DashboardAdminPage">Dashboard Overview</a>
+>>>>>>> f81ff700d353d7f912ce2e549a9bb1b4c4adee24
                 <a class="menu-item" href="/Service">Manage Concert Events</a>
                 <a class="menu-item" href="/AccountPage">User Management</a>
                 <a class="menu-item" href="/Request">Ticket Bookings</a>
