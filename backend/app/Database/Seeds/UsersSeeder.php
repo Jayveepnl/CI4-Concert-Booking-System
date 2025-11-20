@@ -9,7 +9,7 @@ class UsersSeeder extends Seeder
     public function run()
     {
         $now = date('Y-m-d H:i:s');
-
+        $password = password_hash('Password123!', PASSWORD_DEFAULT);
         // no need to add id since its auto increment
         $users = [
             [

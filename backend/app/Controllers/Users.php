@@ -29,7 +29,7 @@ class Users extends BaseController
     }
     public function DashboardAdminPage()
     {
-        return view('users/DashboardAdminPage');
+        return view('users/admin/DashboardAdminPage');
     }
     public function ServicePage()
     {
